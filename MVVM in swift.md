@@ -10,4 +10,4 @@
         
 * ViewModel should only permit the UIKit.UIImage type, no other UIKit type should be permitted inside the ViewModel.
   A general rule of thumb is to never import UIKit in your view models.
-*
+* In MVVM, the view controller is only responsible for views. The view model is always responsible for formatting data from service and model types to present in the views.
