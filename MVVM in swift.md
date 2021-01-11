@@ -1,5 +1,5 @@
 
-**MVVM (Model View View Model) (Core procedure and steps)**
+**MVVM (Model View View Model) (Core steps)**
 
 * Bind viewModel outputs to the views.
     * Mechanism for binding views to output values 
