@@ -1,0 +1,27 @@
+Rx swift 
+
+* Observables
+* Variables
+* Dispose Bag
+
+
+Variables: 
+
+* These are to observe the RxSwift Observables.
+* With these we use a value property to set up a new value.
+* When we want to subscribe a variable we need to use asObservable() method.
+* So after this setup whenever the value is changed, the observer is notified.
+* Variable is guaranteed not to emit error so it makes things a bit simpler to handle on view controller side.
+
+Observables: 
+* These changes their states by emitting events.
+* We need to subscribe to those events.
+* Events can be onNext(), onError()
+
+PublishSubject
+
+Dispose Bag:
+* To destroy an observable we should always call dispose to it. 
+* It would be very hard to handle the dispose manually, so RxSwift equips us with the DisposeBag.
+* When creating an observable we should always add it to the dispose bag, by calling .disposed(by:) method. This way when the dispose bag is deallocated, it calls dispose() to all the observables, which take care of the memory they have used.
+* So Inside the view-model we should define out own dispose bag, When the view model gets deallocated all the observables are deallocated as well.
